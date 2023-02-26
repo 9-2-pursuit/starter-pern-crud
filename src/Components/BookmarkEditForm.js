@@ -18,8 +18,7 @@ function BookmarkEditForm() {
   const updateBookmark = (updatedBookmark) => {
     axios
       .put(`${API}/bookmarks/${id}`, updatedBookmark)
-      .then(
-        () => {
+      .then(() => {
           navigate(`/bookmarks/${id}`);
         },
         (error) => console.error(error)
